@@ -13,7 +13,13 @@
 		body,h1,h2,p{margin: 0; padding: 0;} 
 
 		section{backgound:white}
-
+		nav {position: fixed;   /* 화면 상단에 고정하거나 🐾 */
+    /* position: sticky; 상단에 걸려있게 하거나 🐾 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+	}
 		nav ul {
 			background:white;
 			margin: auto;
@@ -21,7 +27,8 @@
     		padding: 10px;
     		display: flex;         /* 가로로 나열 */
     		justify-content: center;
-    		gap: 180px;             /* 메뉴 사이 간격 */}
+    		gap: 180px;             /* 메뉴 사이 간격 */
+    	filter: blur(3)}
 
 		nav a {
  			text-decoration: none; /* 밑줄 없애기 */
@@ -427,7 +434,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 		</nav>
 
 	<section>
-		<div class='title'>
+		<div class='title' style="">
 		<h1>TUNGS</h1>
 		<p class='title_subtext_mini' style="padding:0">
 				언제나<br>
@@ -451,7 +458,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 
 
-	<section>
+	<section id="secsion1">
 		<div class='problem'>
 		<p class='starbucks'>넘쳐나는 세상,</p>
 		<img src="main cube.png" style="position: 
@@ -469,7 +476,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 
 
-	<section>
+	<section id="secsion2">
 		<div class="feature" style="min-height: 1500px;">
 		<h2>
 			ADD WEIGHT
@@ -535,7 +542,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 
 
-<section>
+<section id="secsion3">
 	<div class='feature'>
 		<h2>MEET ETERNITY</h2>
 		<img src="tunstencrashing.png" style="width: 100%;">
@@ -601,7 +608,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 	</div>
 </section>
  -->
-<section class="homegrown-section">
+<section class="homegrown-section" id="secsion4">
     <div class="feature" class="home-hero" style="padding:0">
         <img src="homegrown.jpg" class="hero-img">
         <div style="position: absolute;
@@ -644,7 +651,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 </section>
 
 
-<section>
+<section id="secsion5">
 	<div class="feature">
 		<h2>BE TOGETHER!</h2>
 		<p class="subtext" style="padding:0px 210px"> 과장없이,<br>
@@ -688,7 +695,7 @@ transform: translate(-50%, -50%) rotate(360deg);
         </div>
 </div>
 </section>
-        <section>
+        <section id="secsion6">
         <div class="feature">
 		<h2 style="font-size:200px"> review</h2>
 
