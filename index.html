@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+
+		@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+		body,h1,h2,p{margin: 0; padding: 0;} 
+
+		section{backgound:white}
+
+		nav ul {
+			background:white;
+			margin: auto;
+    		list-style: none;      /* 점 없애기 */
+    		padding: 10px;
+    		display: flex;         /* 가로로 나열 */
+    		justify-content: center;
+    		gap: 180px;             /* 메뉴 사이 간격 */}
+
+		nav a {
+ 			text-decoration: none; /* 밑줄 없애기 */
+    		color: black;           /* 희끄무리한 블랙 */
+    		outline-color: none;
+    		font-weight: bold;
+    		font-size: 20px;
+}
+
+
+		.title{
+			position: relative;
+			margin: auto;
+			padding: 30px 150px;
+			background-color: white;}
+
+		.problem{
+				position: relative;
+				margin: auto;
+				color: white;
+			}
+		
+		.feature{
+				position: relative;
+				margin: auto;
+				padding: 100px;
+				background-color: whitesmoke;
+				overflow-x: hidden;
+		}
+
+		.feature01_explain
+					{position: relative;
+					margin: auto;
+					padding: 100px;
+					background-color: whitesmoke;}
+		.back-text-wrapper {
+				    position: absolute; 
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 3000px; 
+				    z-index: 0;
+				}
+		.feature01_back_text {
+			    	position: sticky; 
+			    	top: 300px; 
+			    	font-size: 80px;
+			    	text-align: center;
+			    	font-weight: 700;
+			    	z-index: 0; 
+			    	pointer-events: none;
+				}
+		
+		.card-container {
+   				 position: relative;
+   				 display: block;
+   				 width: 100%;
+    			height: auto; 
+   				 padding-top: 50px;
+   				 margin-top: -150px;
+				}
+
+		.sticky-card {
+	    		position: sticky;
+	    		width: 360px;
+			    height: 500px;
+			    background: #fff;
+			    border-radius: 30px;
+			    padding: 10px 20px;
+			    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    margin-bottom: 200px; 
+			    text-align: center;
+			    transition: transform 0.5s ease in;
+			}
+
+		.card-title {
+			    font-size: 54px;
+			  	font-weight: 700;
+			    text-align: center;
+			    color: #666;
+			    word-break: keep-all;
+			    padding: 0 0px;
+				}
+
+		.card-illu img {
+			    width: 80%;
+			    height: auto;
+			    margin-bottom: 15px;
+				}
+
+		.card-desc {
+		    font-size: 18px;
+			    line-height: 1.5;
+			    text-align: center;
+			    color: #666;
+			    word-break: keep-all;
+			    padding: 0 10px;
+			}
+
+				.card1 { margin-top: 500px; top: 20%; left:7%; z-index: 1; transform: rotate(-5deg); }
+				.card2 { top: 23%; left: 28%; z-index: 2; transform: rotate(3deg); }
+				.card3 { top: 21%; left: 49%; z-index: 3; transform: rotate(-10deg); }
+				.card4 { 
+				    top: 20%; left: 70%; z-index: 4; transform: rotate(4deg);}
+
+		h1{	
+			font-family: 'bayon';
+			font-size: 350px;
+			font-style: normal;
+    		font-weight: 400;
+    		letter-spacing: -.2325rem;
+    		line-height: 78%;
+    		text-transform: uppercase;
+    		margin: auto;
+    		padding:100px 0px ;
+			 }
+
+		h2{ padding: 0px 100px;
+			margin: auto;
+			font-family: 'bayon';
+			font-style: normal;
+    		letter-spacing: -.2325rem;
+    		line-height: 78%;
+    		text-transform: uppercase;
+    		margin: auto;
+			font-size: 300px;
+			font-weight: 400;
+			text-align: center;
+			opacity: 60%}
+
+		p{	font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 500;
+			margin:auto;
+			font-size: 23px;
+			padding: 50px 200px;
+			word-break: keep-all;}
+
+		.title_subtext{
+			padding:0; 
+			font-size: 32px; 
+			word-break:keep-all;
+			font-wight: 700;}
+
+		.title_subtext_mini{
+			position: absolute;
+	    	top:  12%;
+	  	  	left:  54%;       
+	   	 	display: inline-block;
+ 	   		font-size: 28px;
+ 	   		font-weight: 400;
+	    	line-height: 1.2;
+	    	margin: 0;}
+
+		.starbucks{
+			padding:  50px 100px; 
+			font-size:200px;
+			margin: auto;
+			font-weight: 900;
+			opacity: 70%}
+
+		.subtext{
+			padding:0px;
+			font-weight:700;
+			font-size: 54px;
+			word-break: keep-all;
+		}
+
+		
+
+		.title_stone
+					{position: absolute;
+					width:35%;
+					height: auto;
+					top:50%;
+					left:50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+					animation: stone-tick 10s steps(12) infinite;
+					}
+		.power
+					{width:30%; 
+					padding: 0px
+					;}
+
+		.power-row {
+   					display: flex;
+				    align-items: center; /* 세로 중앙 정렬 */
+				    /*justify-content: center; /* 가로 중앙 정렬 */				    
+				    margin-bottom: 70px; /* 세트 사이 간격 */
+				    width: 100%;
+
+					}
+
+		.power-text {
+					position: absolute;
+    				width: 100%;
+   					text-align: left; /* 텍스트 정렬 */
+   					
+					}
+
+		.problem::before {
+    		content: "";
+    		position: fixed;
+    		top: 0; left: 0;
+    		width: 100%; height: 100%;
+    		z-index: -1;
+    		background: url('mass.jpg') no-repeat center center / cover;
+   			background-attachment: fixed;
+    		filter: grayscale(100%) contrast(110%) blur(1px);
+    		opacity: 0.8; 
+		}
+
+
+		.homegrown-section {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+		.home-hero {
+			    position: relative;
+			    width: 100%;
+			    height: 100vh; /* 화면을 꽉 채움 🐾 */
+			}
+
+		.hero-img {
+			    width: 100%;
+			    height: 100%;
+			    object-fit: cover; /* 이미지가 비율 유지하며 꽉 차게 🐾 */
+			}
+
+		.hero-caption {
+			    position: absolute;
+			    bottom: 8%; /* 하단 중앙 배치 🐾 */
+			    left: 50%;
+			    transform: translateX(-50%);
+			    text-align: center;
+			    color: #fff;
+			    text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+			}
+
+
+		.home-details {
+		    
+		    background-color: whitesmoke; /* 기존 feature 배경색 유지 🐾 */
+		}
+
+		.details-container {
+		    ;
+		    margin: auto;
+		    display: flex; /* 병렬 배치 🐾 */
+		    align-items: center;
+		    padding: 0 200px;
+		}
+
+		.details-visual {
+		    flex: 1; /* 가로 공간 1:1 분할 🐾 */
+		}
+
+		.details-visual img {
+		    width: 80%;
+		    aspect-ratio: 9 / 16;
+		    object-fit: cover;
+		    object-position: center;
+		    ;
+		}
+
+.details-text {
+    flex: 1;
+    text-align: left;
+}
+
+.heritage-point {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-style: italic;
+}
+
+
+.option-group {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.option {
+	font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.optionimg{width: 400%}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 200px; /* 아이콘 사이의 간격 (원하는 대로 조절 🐾) */
+}
+
+/* 개별 아이콘 스타일 🐾 */
+.icon-item {
+    width: 40px;  /* 아이콘 크기 */
+    height: 40px;
+    border-radius: 50%; /* 동그란 모양 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: scale(1.2); /* 살짝 커지는 효과 🐾 */
+    background-color: #bbb;
+}
+
+.size-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; 
+    color: white;
+    font-weight: bold;
+    border: 1px solid #000;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+}
+
+
+.size-1 {
+    width: 60px; 
+    height: 60px;
+    font-size: 16px;
+}
+
+.size-2 {
+    width: 100px;
+     height: 100px;
+    font-size: 16px;
+}
+
+.size-3 {
+    width: 120px;
+     height: 120px;
+    font-size: 16px;
+}
+
+
+.size-box:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* 정렬을 위한 wrapper 수정 🐾 */
+.size-options {
+    display: flex;
+    align-items: flex-end; /* 바닥선을 맞춰서 크기 차이를 돋보이게 함 🐾 */
+    justify-content: center;
+    gap: 150px;
+}
+
+		@keyframes stone-tick {
+    	0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    	100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }}
+
+    @keyframes roll-east {
+0% {
+left: 0;
+transform: translate(-50%, -50%) rotate(0deg)
+}
+100% {
+left: 1000px; 
+transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+
+
+
+
+
+	</style>
+
+
+</head>
+<body>
+	<nav> 
+			<ul>
+				<li><a href="#secsion1"> 01 </a></li>
+				<li><a href="#secsion2"> 02 </a></li>
+				<li><a href="#secsion3"> 03 </a></li>
+				<li><a href="#secsion4"> 04 </a></li>
+				<li><a href="#secsion5"> 05 </a></li>
+				<li><a href="#secsion6"> 06 </a></li>
+			</ul> 
+		</nav>
+
+	<section>
+		<div class='title'>
+		<h1>TUNGS</h1>
+		<p class='title_subtext_mini' style="padding:0">
+				언제나<br>
+				변함없이<br>
+				계속<br>
+				끝까지<br>
+				당연하게<br>
+				한결같이<br>
+				영원히<br></p>
+		<img src="main stone.png" class="title_stone";
+			>
+		<h1 style="text-align: right; padding-bottom: 0;"> PET! </h1>
+		<p class="title_subtext" style="text-align: right; padding-bottom: 100px;">
+			엄청 무겁고, 엄청 딱딱한,<br>
+			당신을 위한 완전 새로운 동반석.
+		</p>
+
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<div class='problem'>
+		<p class='starbucks'>넘쳐나는 세상,</p>
+		<img src="main cube.png" style="position: 
+		absolute; top:45%; width:5%; animation: roll-east 10s steps(12) infinite;">
+
+		<P style="font-weight:700; display: block; width: fit-content; margin-left:auto; margin-right: 10%; text-align:left;"> 씨끄러운 인간관계에 지치셨나요?<br>
+			자극적인 도파민에 질리셨나요? <br>
+			그렇다면 텅스펫을 길러보세요! <br>
+			텅스펫이 고요함과 미소를 선물합니다.<br>
+		</P>
+		<p class='starbucks' style="text-align:right">단 하나의 질량.</p>
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<div class="feature" style="min-height: 1500px;">
+		<h2>
+			ADD WEIGHT
+		</h2>
+		<p class='subtext' style="text-align: right; padding-right: 250px; padding-bottom: 70px">
+			일상에 뜻밖의 무게를 더하세요!
+		</p>
+		<p>
+			텅스펫은 순수 텅스텐 반려석이에요.<br>
+			그래요. 이제 돈과 시간을 써서<br>
+			먹이를 주고, 배변을 치울 필요가 전혀 없어요!<br>
+			거기다 이별의 슬픔을 걱정할 필요조차 없죠.<br>
+			텅스펫에게 하나 뿐인 이름을 지어주고, 곁에두고,<br>
+			정성스럽게 꾸며서 당신만의 텅스펫과 함께해요!
+		</p>
+		<img src="tungspet pakage.png" style="position: absolute; top:28%; left:23%; width:70%;">
+		
+		
+	
+	</div>
+	</section>
+
+<section>
+	<div class='feature01_explain'>
+		<div class="back-text-wrapper">
+		<p class='feature01_back_text'>
+			자, 뭘 해볼까?
+		</p>
+	</div>
+<div class="card-section">
+    <div class="card-container">
+        
+        <div class="sticky-card card1">
+            <p class="card-title">이름 지어주기</p>
+            <div class="card-illu"><img src="nametag.png" alt="이름 지어주기"></div>
+            <p class="card-desc">단순한 이름이라도 좋아요.<br>이름은 마음을 주는 첫 걸음이랍니다.</p>
+        </div>
+
+        <div class="sticky-card card2">
+            <p class="card-title">마음껏 꾸며주기</p>
+            <div class="card-illu" style="width: 60%;"><img src="sticker.png" alt="마음껏 꾸며주기"></div>
+            <p class="card-desc">스티커를 붙이고 어울리는<br>모자를 씌워봐요.</p>
+        </div>
+
+        <div class="sticky-card card3">
+            <p class="card-title">바라보기</p>
+            <div class="card-illu"><img src="rest.png" alt="바라보기"></div>
+            <p class="card-desc">아무것도 하지 않고 지켜보세요.<br>소중하고 조용한 시간을 만끽하세요.</p>
+        </div>
+
+        <div class="sticky-card card4">
+            <p class="card-title">함께 공부하기</p>
+            <div class="card-illu"><img src="study.png" alt="함께 공부하기"></div>
+            <p class="card-desc">텅스펫은 멋진 데스크메이트죠.<br>심지어 훌륭한 문진이기도 해요.</p>
+        </div>
+
+`````</div>
+</div>
+		
+
+		</div>
+</section>
+
+
+
+<section>
+	<div class='feature'>
+		<h2>MEET ETERNITY</h2>
+		<img src="tunstencrashing.png" style="width: 100%;">
+		<p class="subtext" style="text-align:center; padding: 30px;">
+			고중량 X 고밀도 = 영원함.
+		</p>
+		<p style="text-align:center; padding-bottom: 200px;"> 어이쿠, 손에서 텅스펫을 떨어트리셨나요?<br>
+			걱정하지마세요! 텅스펫은 겉치레가 아니에요.<br>
+			오히려 바닥을 걱정해야 할걸요.<br>
+			</p>
+
+
+	    <div class="power-row">
+    <img src="typoon.png" class="power" style="margin-left:10%">
+    <div class="power-text" style="left:35%">
+        <p><strong style="font-size:32px;">일단 밀도부터.</strong><br>
+        19.3g/cm3. 이건 단순한 숫자가 아니에요.<br>
+        물보다 19배, 철보다 2.5배 응축된 텅스펫은<br>
+        그 누구보다도 엉덩이가 무겁답니다.<br>
+        텅스펫이 자리에서 벗어날 일은 절대 없어요.</p>
+    </div>
+</div>
+
+<div class="power-row">
+    <img src="fire.png" class="power"  style="margin-left:60%">
+    <div class="power-text" style="left:15%">
+        <p><strong style="font-size:32px;">타협하지 않는 3.422°C</strong><br>
+        날이 갈수록 뜨거워지는 지구. 철이<br>
+        흐물흐물해지고 다이아몬드가 말랑해지는<br>
+        정도의 온도로 올라간다해도 당신을 <br>
+        위해서, 텅스펫은 분자 하나 까딱하지<BR> 
+    	않을거에요.</p>
+    </div>
+</div>
+
+<div class="power-row" style="">
+    <img src="kaboom!.png" class="power" style="margin-left:10%">
+
+        <p class="power-text" style="left:35%">
+        	<strong style="font-size:32px;">경도 9. 영원한 순수함.</strong><br>
+        망치로 내리치고, 전기톱으로 갈고, 70층짜리<Br>
+        빌딩으로 깔아뭉개고 심지어는 성층권에서 <br>
+        떨어트린다해도! 이 의리 넘치는 텅스펫은<br>
+        당신과 처음만난 모습 그대로일거에요.</p>
+   
+	</div>
+</section>
+
+
+<!-- <section>
+	<div class="feature">
+		<h2>
+			FEEL THEM!
+		</h2>
+		<p class="subtext">텅스텐을 만지면 기분이 좋아져요.</p>
+
+		<p>텅스펫은 놀라운 그라운딩 경험을 선사합니다. 우울하신가요? 불안하신가요? 텅스펫을 손 위에 올리세요!
+		그리고 특유의 무게와 온도와 질감에 집중해봐요. 어느순간, 다시 현실에 돌아와있는 자신을 발견할 수 있을거에요.</p>
+
+		<img src="">
+		<img src="">
+
+	</div>
+</section>
+ -->
+<section class="homegrown-section">
+    <div class="feature" class="home-hero" style="padding:0">
+        <img src="homegrown.jpg" class="hero-img">
+        <div style="position: absolute;
+				    bottom: 8%; /* 하단 중앙 배치 🐾 */
+				    left: 50%;
+				    transform: translateX(-50%);
+				    text-align: center;
+				    color: Black;
+				    opacity: 100%;
+				    color: #fff;
+
+				    text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+    ">
+            <h2 style="opacity:80%;">HOMEGROWN</h2>
+            <p class="subtext">강원도 영월에서 온 우리 텅스텐</p>
+        </div>
+    </div>
+
+    <div class="home-details">
+        <div class="details-container">
+            <div class="details-visual">
+                <img src="videoplayback_1.gif" alt="상동광산의 역사">
+            </div>
+            
+            <div style="flex: 1;
+    			text-align: left;">
+                <p class="subtext">영월 상동광산을 아시나요? </p>
+                <p style="padding:50px 100px; text-align: left;">
+                    우리나라 대부분의 텅스텐은 이곳에서 만들어졌어요.<br>
+                    상동 텅스텐은 한국 수출의 절반을 담당했던 전후 복구의 핵심 동력이었으며, 
+                    상동광산은 한국 근대 산업화의 상징적인 장소죠.
+                </p>
+                <p style="padding:0px 100px; text-align: left;">
+                    즉, 텅스펫과 함께하는 것은 역사적인 광맥에서 비롯된
+                    <strong>한국 산업의 유산</strong>과 함께하는 것이기도 해요!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+	<div class="feature">
+		<h2>BE TOGETHER!</h2>
+		<p class="subtext" style="padding:0px 210px"> 과장없이,<br>
+							영원히 함께.</p>
+
+		<div class="option-group">
+    <p class="option">SIZE</p>
+    <div class="icon-wrapper size-options">
+        <div class="size-box size-1">1"</div>
+        <div class="size-box size-2">2"</div>
+        <div class="size-box size-3">3"</div>
+    </div>
+</div>
+
+		<div class="option-group" >
+            <p class="option" style="padding-bottom: 100px">SHAPE</p>
+            <div class="icon-wrapper" style="padding-bottom: 100px">
+               
+                <div class="icon-wrapper">
+                <div class="icon-item"><img class="optionimg" src="mineral.png"></div><div class="icon-item"><img class="optionimg" src="cube option.png"></div>
+                <div class="icon-item"><img class="optionimg" src="silnder.png"></div>
+        
+            </div>
+        </div>
+
+        <div class="option-group">
+            <p class="option" style="padding-bottom: 100px;">TEXTURE</p>
+            <div class="icon-wrapper" style="padding-bottom: 100px;">
+                <div class="icon-item"><img class="optionimg" src="satin.png"></div>
+                <div class="icon-item"><img class="optionimg" src="mirror.png"></div>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <p class="option">SERVICE</p>
+            <div class="icon-wrapper">
+                <div class="icon-item"></div>
+                <div class="icon-item"></div>
+                <div class="icon-item"></div>
+            </div>
+        </div>
+</div>
+</section>
+
+        <section>
+        <div class="feature">
+		<h2 style="font-size:200px"> review</h2>
+
+	</div>
+</section>
+
+<footer></footer>
+
+</body>
+</html>
