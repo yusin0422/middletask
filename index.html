@@ -12,7 +12,7 @@
 
 		body,h1,h2,p{margin: 0; padding: 0;} 
 
-		section{backgound:white}
+		section{backgound:white; margin: auto;}
 		nav {position: fixed;   /* 화면 상단에 고정하거나 🐾 */
     /* position: sticky; 상단에 걸려있게 하거나 🐾 */
     top: 0;
@@ -24,11 +24,11 @@
 			background: rgba(255, 255, 255, 0.3); 
    			backdrop-filter: blur(10px);
 			margin: auto;
-    		list-style: none;      
+    		list-style: none;      /* 점 없애기 */
     		padding: 10px;
     		display: flex;         /* 가로로 나열 */
     		justify-content: center;
-    		gap: 100px;             /* 메뉴 사이 간격 */
+    		gap: 180px;             /* 메뉴 사이 간격 */
     	filter: blur(3)}
 
 		nav a {
@@ -117,7 +117,7 @@
 			    font-size: 54px;
 			  	font-weight: 700;
 			    text-align: center;
-			    color: black;
+			    color: #666;
 			    word-break: keep-all;
 			    padding: 0 0px;
 				}
@@ -227,9 +227,9 @@
 
 		.power-row {
    					display: flex;
-				    align-items: center; /* 세로 중앙 정렬 */
-				    /*justify-content: center; /* 가로 중앙 정렬 */				    
-				    margin-bottom: 70px; /* 세트 사이 간격 */
+				    align-items: center; 
+					    
+				    margin-bottom: 70px; 
 				    width: 100%;
 
 					}
@@ -237,7 +237,7 @@
 		.power-text {
 					position: absolute;
     				width: 100%;
-   					text-align: left; /* 텍스트 정렬 */
+   					text-align: left; 
    					
 					}
 
@@ -286,19 +286,19 @@
 
 		.home-details {
 		    
-		    background-color: whitesmoke; /* 기존 feature 배경색 유지 🐾 */
+		    background-color: whitesmoke; 
 		}
 
 		.details-container {
 		    ;
 		    margin: auto;
-		    display: flex; /* 병렬 배치 🐾 */
+		    display: flex; 
 		    align-items: center;
 		    padding: 0 200px;
 		}
 
 		.details-visual {
-		    flex: 1; /* 가로 공간 1:1 분할 🐾 */
+		    flex: 1; 
 		}
 
 		.details-visual img {
@@ -325,7 +325,7 @@
 .optionimg
 
 .optionimg:hover {
-    transform: scale(1); /* 살짝 커지는 효과 🐾 */
+    transform: scale(1); 
     background-color: #bbb;
 }
 
@@ -345,16 +345,16 @@
 
 
 .gallery-container {
-    position: relative; /* 자식 요소들의 기준점이 됩니다 🐾 */
+    position: relative; 
     width: 100%;
-    height: 100vh; /* 화면 꽉 차게 */
+    height: 100vh; 
 }
 
-/* 🐾 모든 이미지의 공통 스타일 */
+
 .random-img {
     position: absolute;
-    border-radius: 15px; /* 둥근 모서리 🐾 */
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.1); /* 약간의 그림자 */
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1); 
     object-fit: cover;
 }
 
@@ -393,9 +393,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 정확히 정중앙 위치 🐾 */
+    transform: translate(-50%, -50%); 
     text-align: center;
-    color: #e65c5c; /* 중앙 텍스트 색상 */
+    color: #e65c5c; 
 }
 
 
@@ -522,7 +522,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 <section>
 	<div class='feature01_explain'>
 		<div class="back-text-wrapper">
-		<p class='feature01_back_text' style="color:#666">
+		<p class='feature01_back_text'>
 			자, 뭘 해볼까?
 		</p>
 	</div>
@@ -570,7 +570,7 @@ transform: translate(-50%, -50%) rotate(360deg);
 		<p class="subtext" style="text-align:center; padding: 30px;">
 			고중량 X 고밀도 = 영원함.
 		</p>
-		<p style="text-align:center; padding-top:0px; padding-bottom: 200px;"> 어이쿠, 손에서 텅스펫을 떨어트리셨나요?<br>
+		<p style="text-align:center; padding-bottom: 200px;"> 어이쿠, 손에서 텅스펫을 떨어트리셨나요?<br>
 			걱정하지마세요! 텅스펫은 겉치레가 아니에요.<br>
 			오히려 바닥을 걱정해야 할걸요.<br>
 			</p>
