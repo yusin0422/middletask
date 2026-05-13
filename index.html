@@ -90,6 +90,7 @@
 				position: relative;
 				margin: auto;
 				color: white;
+				overflow: hidden;
 			}
 		
 		.feature{
@@ -231,12 +232,46 @@
 	    	margin: 0;}
 
 		.starbucks{
-			color: white;
-			padding:  100px 100px; 
-			font-size:200px;
+			position: relative;
+			padding: 100px; 
+			font-size:300px;
 			margin: auto;
 			font-weight: 900;
-			opacity: 70%}
+			line-height: 1;
+			background:linear-gradient(
+            120deg, 
+            rgba(255, 255, 255, 0) 30%, 
+            rgba(255, 255, 255, 0.8) 50%, 
+            rgba(255, 255, 255, 0) 70%) no-repeat,
+        	url('texture2.png') no-repeat center;
+			filter: brightness(1) contrast(3);
+			background-size: 200% 100%, cover; 
+    		background-position: -150% 0, center;
+			-webkit-background-clip: text;
+			background-clip: text;
+			color:transparent;
+			animation: shine 3s infinite;
+			}
+		.starbucks .dot {
+		    position: absolute;
+		    right: 20px; 
+		    display: inline-block;
+		    background: inherit;
+		    -webkit-background-clip: text;
+					background-clip: text;
+		    color: transparent;
+		    animation: inherit;
+		    font-size: 300px;
+		    background-size: 200% 100%, cover;
+		}
+
+	@keyframes shine {
+    0% {background-position: 150% 0, center;
+    }
+    100% {background-position: -150% 0, center;
+    }
+}
+
 
 		.subtext{
 			padding:0px;
@@ -245,13 +280,12 @@
 			word-break: keep-all;
 		}
 
-		
 
 		.title_stone
 					{position: absolute;
 					width:35%;
 					height: auto;
-					top:50%;
+					top:43%;
 					left:50%;
 					transform: translate(-50%, -50%);
 					z-index: 10;
@@ -286,17 +320,19 @@
     		z-index: -1;
     		background: url('mass.jpg') no-repeat center center / cover;
    			background-attachment: fixed;
-    		filter: grayscale(100%) contrast(300%) blur(3px);
+    		filter: 
+    		/*grayscale(100%) contrast(300%) */
+    		blur(7px);
     		opacity: 0.8; 
 		}
 
 
 		.homegrown-section {
-	color: white;
-    width: 100%;
-    background-color: #fff;
-    overflow: hidden;
-}
+			color: white;
+		    width: 100%;
+		    background-color: #fff;
+		    overflow: hidden;
+		}
 
 		.home-hero {
 			    position: relative;
@@ -347,155 +383,156 @@
 		    ;
 		}
 
-.details-text {
-    flex: 1;
-    text-align: left;
-    color: white;
-}
+		.details-text {
+		    flex: 1;
+		    text-align: left;
+		    color: white;
+		}
 
-.heritage-point {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-    font-style: italic;
-}
-
-
-.optionimg
-
-.optionimg:hover {
-    transform: scale(1); 
-    background-color: #bbb;
-}
-
-.size-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333; 
-    color: white;
-    font-weight: bold;
-    border: 1px solid #000;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-
-}
+		.heritage-point {
+		    margin-top: 30px;
+		    padding-top: 20px;
+		    border-top: 1px solid #ccc;
+		    font-style: italic;
+		}
 
 
+		.size-box {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    background-color: #333; 
+		    color: white;
+		    font-weight: bold;
+		    border: 1px solid #000;
+		    transition: transform 0.2s ease;
+		    cursor: pointer;
 
-.gallery-container {
-    position: relative; 
-    width: 100%;
-    height: 100vh; 
-}
+		}
 
-
-.random-img {
-    position: absolute;
-    border-radius: 15px;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.1); 
-    object-fit: cover;
-}
-
-.img-1 { 
-    top: 5%;
-    left: 2%;
-    width: 600px;
-    height: 220px;
-}
-
-.img-2 {
-    top: 35%;
-    left: 10%;
-    width: 450px;
-    height: 450px;
-}
-.img-3 { 
-    top: 0%;
-    left: 45%;
-    width: 250px;
-    height: 250px;
-}
-.img-4 { 
-    top: 43%;
-    left: 33%;
-    width: 350px;
-    height: 550px;
-}
-.img-5 { 
-    top: 9%;
-    left: 60%;
-    width: 500px;
-    height: 500px;
-}
-
-.img-6 {
-	top: 60%;
-    left: 50%;
-    width: 500px;
-    height: 250px;
-
-}
-.central-text {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    text-align: center;
-    font-weight: 800;
-    color: black; 
-}
+		.gallery-container {
+		    position: relative; 
+		    width: 100%;
+		    height: 100vh; 
+		    padding: 100px 0px ;
+		}
 
 
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 0 10%; 
-    background: rgb(254, 249, 231, 0.3); 
-    backdrop-filter: blur(15px); 
-    z-index: 9999;
-    box-sizing: border-box;
- border-radius: 0 0 25px 25px;
+		.random-img {
+		    position: absolute;
+		    border-radius: 15px;
+		    box-shadow: 2px 4px 10px rgba(0,0,0,0.1); 
+		    object-fit: cover;
+		    transition: all 0.3s ease-in-out;
+		}
+
+		.random-img:hover {
     
-    z-index: 9999;
-    box-sizing: border-box;
+    transform: scale(1.1) translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10; 
+    filter: brightness(1.2);
 }
 
-.nav-logo {
-	font-family: 'bayon';
-    font-size: 32px;
-    font-weight: 900;
-    color: #e33529;; 
-    text-decoration: none;
-    letter-spacing: 1.5px;
+		.img-1 { 
+		    top: 5%;
+		    left: -5%;
+		    width: 600px;
+		    height: 250px;
+		}
 
-}
+		.img-2 {
+		    top: 35%;
+		    left: 0%;
+		    width: 450px;
+		    height: 450px;
+		}
+		.img-3 { 
+		    top: 0%;
+		    left: 43%;
+		    width: 250px;
+		    height: 250px;
+		}
+		.img-4 { 
+		    top: 53%;
+		    left: 33%;
+		    width: 350px;
+		    height: 550px;
+		}
+		.img-5 { 
+		    top: 9%;
+		    left: 70%;
+		    width: 400px;
+		    height: 400px;
+		}
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: clamp(20px, 4vw, 60px);
-    margin: 0;
-    padding: 0;
-}
+		.img-6 {
+			top: 50%;
+		    left: 64%;
+		    width: 700px;
+		    height: 270px;
 
-.nav-menu a {
-    text-decoration: none;
-    color: #e33529;; 
-    font-weight: 500;
-    font-size: 22px;
-    transition: color 0.3s ease;
-}
+		}
+		.central-text {
+		    position: absolute;
+		    top: 35%;
+		    left: 50%;
+		    transform: translate(-50%, -50%); 
+		    text-align: center;
+		    font-weight: 800;
+		    color: black; 
+		}
 
-.nav-menu a:hover {
-    color: lightcyan; 
-}
+
+		.main-nav {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 70px; 
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between; 
+		    padding: 0 10%; 
+		    background: rgb(254, 249, 231, 0.3); 
+		    backdrop-filter: blur(15px); 
+		    z-index: 9999;
+		    box-sizing: border-box;
+		 border-radius: 0 0 25px 25px;
+		    
+		    z-index: 9999;
+		    box-sizing: border-box;
+		}
+
+		.nav-logo {
+			font-family: 'bayon';
+		    font-size: 32px;
+		    font-weight: 900;
+		    color: #e33529;; 
+		    text-decoration: none;
+		    letter-spacing: 1.5px;
+
+		}
+
+		.nav-menu {
+		    list-style: none;
+		    display: flex;
+		    gap: clamp(20px, 4vw, 60px);
+		    margin: 0;
+		    padding: 0;
+		}
+
+		.nav-menu a {
+		    text-decoration: none;
+		    color: #e33529;; 
+		    font-weight: 500;
+		    font-size: 22px;
+		    transition: color 0.3s ease;
+		}
+
+		.nav-menu a:hover {
+		    color: lightcyan; 
+		}
 
 
 
@@ -511,11 +548,11 @@
     @keyframes roll-east {
 0% {
 left: 0;
-transform: translate(-50%, -50%) rotate(0deg)
+transform: translate(-40%, -40%) rotate(0deg)
 }
 100% {
-left: 1000px; 
-transform: translate(-50%, -50%) rotate(360deg);
+left: 1800px; 
+transform: translate(-40%, -40%) rotate(360deg);
 }
 }
 
@@ -618,10 +655,10 @@ transform: translate(-50%, -50%) rotate(360deg);
 .curved-wrapper {
   
     position: absolute; 
-    top: 50%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    overflow: hidden;
     pointer-events: none; 
     
     width: 1000px; 
@@ -635,7 +672,6 @@ transform: translate(-50%, -50%) rotate(360deg);
 .curved-svg {
     width: 2000px;
     height: 2000px;
-    /* 🐾 휘어진 텍스트 통째로 돌리기 */
     animation: rotate-curved-text 15s linear infinite;
 }
 
@@ -662,11 +698,10 @@ transform: translate(-50%, -50%) rotate(360deg);
     gap: 70px;
     padding: 60px 5%;
     padding-bottom: 300px;
-    overflow-x: auto; 
 }
 
 .item-card {
-    background: rgb(255, 253, 246);
+    background: rgb(255, 246, 246);
     border-radius: 28px;
     flex: 1; 
     min-width: 350px; 
@@ -736,7 +771,6 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 <div id="intro-splash" >
     <div class="eye-pair">
-        <!-- 왼쪽 눈 -->
         <div class="toy-eye">
             <div class="eye-white">
                 <div class="eye-iris"></div>
@@ -744,7 +778,6 @@ transform: translate(-50%, -50%) rotate(360deg);
                 <div class="eye-lid bottom"></div>
             </div>
         </div>
-        <!-- 오른쪽 눈 -->
         <div class="toy-eye">
             <div class="eye-white">
                 <div class="eye-iris"></div>
@@ -790,16 +823,20 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 	<section id="secsion1">
 		<div class='problem'>
-		<p class='starbucks'>넘쳐나는 세상,</p>
+		<p class='starbucks' style="padding-top:200px;">넘쳐나는 세상,</p>
+		<p class='starbucks' style="text-align:right; padding-top: 250px; padding-bottom:0;">단 하나의 질량<span class="dot">.</span></p>
+		
 		<img src="main cube.png" style="position: 
-		absolute; top:45%; width:5%; animation: roll-east 10s steps(12) infinite;">
+		absolute; top:37%; width:8%; animation: roll-east 10s steps(12) infinite;">
 
-		<P style="font-weight:700; display: block; width: fit-content; margin-left:auto; margin-right: 10%; text-align:left; color: #FEF9E7;"> 씨끄러운 인간관계에 지치셨나요?<br>
+		<P style="padding: 350px 200px; font-size:43px; font-weight:600; display: block; width: fit-content; margin-left:auto; text-align:left; color: #FEF9E7; 
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);"> 
+			씨끄러운 인간관계에 지치셨나요?<br>
 			자극적인 도파민에 질리셨나요? <br>
 			그렇다면 텅스펫을 길러보세요! <br>
-			텅스펫이 고요함과 미소를 선물합니다.<br>
+			텅스펫이 고요함과 미소를 선물할거에요.<br>
 		</P>
-		<p class='starbucks' style="text-align:right">단 하나의 질량.</p>
+		
 		</div>
 	</section>
 
@@ -969,32 +1006,32 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 
 <section id="secsion5">
-	<div class="feature" style="background-color: lightcyan;height:auto;">
-		<h2 style="color:#25cdd1;">BE TOGETHER!</h2>
+	<div class="feature" style="background-color: #ffdede;height:auto;">
+		<h2>BE TOGETHER!</h2>
 		<p class="subtext" style="padding:0px 210px; padding-bottom: 150px;"> 
 			나에게 딱 맞는 텅스텐과 함께</p>
 
 		<div style="; position: relative;">
 			<img src="oneinch.png" class="optionimg" style="position: absolute; top: 7%; left: 25%; z-index:2;">
-			<img src="twoinch.png" class="optionimg" style="position: absolute; top: 30%; left: 65%; rotate:-63deg; z-index: 2;">
-			<img src="threeinch.png" class="optionimg" style="position: absolute; top: 50%; left:0%">
+			<img src="twoinch.png" class="optionimg" style="position: absolute; top: 40%; left: 65%; rotate:-63deg; z-index: 2;">
+			<img src="threeinch.png" class="optionimg" style="position: absolute; top: 70%; left:0%">
 
-			<p style=" padding:300px 0px; font-size: 150px; font-weight: 700;"> SIZE </p>
+			<p style=" padding:300px 0px; margin-left:10% ;font-size: 180px; font-weight: 700;"> SIZE </p>
 
 			<p style="position: absolute; top:4%; left:22%; font-size: 72px; font-weight: 600;"> 1<span style="font-size: 36px; vertical-align: baseline; font-weight: 600;">inch</span> </p>
 			<p style="font-size:18px; position: absolute; top:7%; left:31%;"> 약 300g. 동전 100원 정도의<br>
 			 크기지만 무게는 스마트폰보다도<br>
 			 무거워요.</p>
 
-			<p style="position: absolute; top:29%; left:44%; font-size: 72px; font-weight: 600;"> 2<span style="font-size: 36px; vertical-align: baseline; font-weight: 600;">inch</span> </p>
+			<p style="position: absolute; top:39%; left:44%; font-size: 72px; font-weight: 600;"> 2<span style="font-size: 36px; vertical-align: baseline; font-weight: 600;">inch</span> </p>
 
-			<p style="font-size:18px; position: absolute; top:40%; left:40%;"> 약 2.5kg. 손바닥에 쏙<br> 
+			<p style="font-size:18px; position: absolute; top:50%; left:40%;"> 약 2.5kg. 손바닥에 쏙<br> 
 				들어오는 묵직한 존재감이<br> 
 				특징이죠.</p>
 
-			<p style="position: absolute; top:63%; left:36%; font-size: 72px; font-weight: 600;">3<span style="font-size: 36px; vertical-align: baseline; font-weight: 600;">inch</span> </p>
+			<p style="position: absolute; top:81%; left:36%; font-size: 72px; font-weight: 600;">3<span style="font-size: 36px; vertical-align: baseline; font-weight: 600;">inch</span> </p>
 
-			<p style="font-size:18px; position: absolute; top:74%; left:36%;">  
+			<p style="font-size:18px; position: absolute; top:92%; left:36%;">  
 			약 8.5kg. 야구공마냥 한 손에<br> 
 			딱 들어오는 크기에요. 하지만 한 손으로<br> 
 			들기 버거울 걸요? 관상용으로만 쓰세요!</p>
@@ -1004,34 +1041,34 @@ transform: translate(-50%, -50%) rotate(360deg);
 
 		</div>
 
-		<div style="padding:400px 0px; padding-bottom:50px;position: relative;">
-		<p style="text-align:center ;padding-top:0px; padding-bottom:50px;font-size: 150px; font-weight: 700;"> SHAPE </p>	
+		<div style="padding:500px 0px; padding-bottom:200px; position: relative;">
+		<p style="text-align:center ;padding-top:0; padding-bottom:0; font-size: 180px; font-weight: 700;"> SHAPE </p>	
     
   <div class="shape-grid">
 
     <div class="item-card">
         <div class="img-area"><img src="original.png"></div>
         <h3 class="item-title" style="font-size:32px">ORIGINAL</h3>
-        <p class="item-desc" style="font-size:18px; padding:0; margin: auto;">방금 찾아낸 원석의 거친 숨결.<br>자연의 텍스처를 느껴보세요.</p>
+        <p class="item-desc" style="font-size:18px; padding:0; margin: auto;">방금 찾아낸 거친 원석.<br>자연의 생생한 텍스처를 느껴보세요.</p>
     </div>
 
     <div class="item-card">
         <div class="img-area"><img src="cubeoption.png"></div>
         <h3 class="item-title" style="font-size:32px">CUBE</h3>
-        <p class="item-desc" style="font-size:18px; padding:0; margin: auto;">정밀 소결 공법으로 빚어낸 질서.<br>안정적인 정육면체를 경험하세요.</p>
+        <p class="item-desc" style="font-size:18px; padding:0; margin: auto;">정밀 소결 공법으로 빚어낸 매끄러움.<br>세련된 정육면체를 경험하세요.</p>
     </div>
 
     <div class="item-card mini-tall">
         <div class="img-area"><img src="mini.png"></div>
         <h3 class="item-title" style="font-size:32px">MINI</h3>
-        <p class="item-desc" style="font-size:18px;padding:0; margin: auto;">작지만 결코 가볍지 않은 존재감.<br>가장 아기자기한 텅스펫입니다.<br>절대 입에 넣지 마세요!</p>
+        <p class="item-desc" style="font-size:18px;padding:0; margin: auto;">작지만 결코 가볍지 않은 존재감.<br>아기자기하고 귀엽죠?<br>하지만 절대 입에 넣지 마세요!</p>
     </div>
 </div>
 </div>
 
 		<div style="isolation: isolate; position: relative; padding:200px 0px;">
 			
-			<p style="font-size:72px; font-weight: 600;  padding-bottom:0; margin-left: 40%; text-align: left;">
+			<p style="font-size:72px; font-weight: 600;  padding-bottom:0; margin-left: 42%; text-align: left;">
 			SATIN
 			</p>
 			<p style="font-size:18px; text-align: left; padding-top:0; margin-left:42%;  word-break: keep-all;">
@@ -1041,13 +1078,13 @@ transform: translate(-50%, -50%) rotate(360deg);
 			</p>
 
 
-			<p style="text-align:center ; padding-bottom:50px;font-size: 150px; font-weight: 700; z-index: 2; text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);"> TEXTURE </p>	
+			<p style="text-align:center ; padding-bottom:50px;font-size: 180px; font-weight: 700; z-index: 2; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);"> TEXTURE </p>	
 			<img src="satin.png" style="position:absolute; top: 0; left: 5%; rotate: 20deg; width: 50%; z-index: -1;">
 			
 			<p style="font-size:72px; font-weight: 600;  padding-bottom:0; margin-right: 40%; text-align: left; z-index: 2;">
 			MIRROR
 			</p>
-			<p style="font-size:18px;text-align: left; padding-top:0; margin-right:40%; word-break: keep-all; z-index: 2;">
+			<p style="font-size:20px;text-align: left; padding-top:0; margin-right:40%; word-break: keep-all; z-index: 2;">
 				호수처럼 투명한 질감. 
 				거울아 거울아 세상에서 누가 제일 이쁘니?
 				과묵한 텅스펫은 말이 없어요. 하지만 누구보다도
@@ -1068,10 +1105,10 @@ transform: translate(-50%, -50%) rotate(360deg);
 
         <section id="secsion6">
         <div class="feature" style="background-color: white;">
-		<h2 style="color:;padding-bottom: 30px;"> review</h2>
+		<h2 style="color:;padding-bottom: 50px;"> review</h2>
 		<div class="gallery-container">
     <div class="central-text">
-  <p style="font-size: 32px;"> @Tungs_pet
+  <p style="font-size: 48px; font-weight: 800;"> @Tungs_pet
   	<br></p>
     </div>
     
